@@ -1,12 +1,19 @@
 name: Python CI
 
+#on:
+#  push:
+#    branches:
+#      - main
+#  pull_request:
+#    branches:
+#      - main
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'PythonAdd/**'  # Trigger only if changes are made inside the project1 folder
   pull_request:
-    branches:
-      - main
+    paths:
+      - 'PythonAdd/**'
 
 jobs:
   build:
